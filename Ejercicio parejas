@@ -1,0 +1,159 @@
+#datos por teclado
+aprendices = []
+edades = []
+
+
+cantidad = int(input("¿Cuántos aprendices vas a ingresar? "))
+
+
+for i in range(cantidad):
+    nombre = input(f"Ingrese nombre del aprendiz #{i+1}: ")
+    edad = input(f"Ingrese edad de {nombre}: ")
+    
+    aprendices.append(nombre)
+    edades.append(edad)
+
+
+
+for i in range(cantidad):
+    print(f"{aprendices[i]} tiene {edades[i]} años")
+
+# aprendiz con mayor edad
+
+aprendices = []
+edades = []
+
+cantidad = int(input("¿Cuántos aprendices vas a ingresar? "))
+
+for i in range(cantidad):
+    nombre = input(f"Ingrese nombre del aprendiz #{i+1}: ")
+    edad = input(f"Ingrese edad de {nombre}: ")
+    
+    aprendices.append(nombre)
+    edades.append(edad)
+
+for i in range(cantidad):
+    print(f"{aprendices[i]} tiene {edades[i]} años")
+
+
+
+edad_maxima = max(edades)  
+indice_mayor = edades.index(edad_maxima) 
+aprendiz_mayor = aprendices[indice_mayor] 
+
+print(f"\nEl aprendiz de mayor edad es  {aprendiz_mayor}  {edad_maxima} ")
+
+#nombre intructora de primero
+
+aprendices = ["maria","juan","lois","camilo","brayan"]
+aprendices.insert(1,"sandra")
+print(aprendices)
+
+#aprendicezs de 18 años 
+aprendices = []
+edades = []
+
+
+contador_18 = 0
+
+cantidad = int(input("¿Cuántos aprendices vas a ingresar? "))
+
+
+for i in range(cantidad):
+    nombre = input(f"Ingrese nombre del aprendiz #{i+1}: ")
+    edad = int(input(f"Ingrese edad de {nombre}: ")) 
+    
+    aprendices.append(nombre)
+    edades.append(edad)
+
+    if edad == 18:
+        contador_18 += 1
+
+
+
+for i in range(cantidad):
+    print(f"{aprendices[i]} tiene {edades[i]} años")
+
+
+print(f" Total de aprendices con 18 años: {contador_18}")
+
+#apreindiz al final de la lista 
+aprendices = ["maria","juan","lois","camilo","brayan"]
+aprendices.insert(5,"sandra")
+print(aprendices)
+
+#eliminar nombre de la instructora
+
+instructores = ["Ana", "Luis", "sandra", "Carlos"]
+print(instructores)
+del instructores[2]   
+print(instructores)
+"""""
+"""""
+#bucar datos 
+aprendices = []
+edades = []
+
+cantidad = int(input("¿Cuántos aprendices vas a ingresar? "))
+
+for i in range(cantidad):
+    nombre = input(f"Ingrese nombre del aprendiz #{i+1}: ")
+    edad = input(f"Ingrese edad de {nombre}: ")
+    
+    aprendices.append(nombre)
+    edades.append(edad)
+
+
+print("\nLista de aprendices:")
+for i in range(cantidad):
+    print(f"{aprendices[i]} tiene {edades[i]} años")
+
+
+buscar = input("\nIngrese el nombre del aprendiz a buscar: ")
+
+if buscar in aprendices:
+    indice = aprendices.index(buscar)
+    print(f"{buscar} tiene {edades[indice]} años.")
+else:
+    print("Aprendiz no encontrado.")
+
+#10 primeros aprendices 
+aprendices = ["Ana", "Luis", "María", "Carlos", "Pedro", "Luisa", "Jorge", "Sofía", "Miguel", "Laura", "Andrés", "Clara"]
+
+print("Los primeros 10 aprendices son:")
+for i in range(min(10, len(aprendices))):
+    print(f"{i+1}. {aprendices[i]}")
+
+#los 10 ultimos aprendices 
+
+aprendices = [
+    "Ana", "Luis", "María", "Carlos", "Pedro", "Luisa", "Jorge", "Sofía", 
+    "Miguel", "Laura", "Andrés", "Clara", "Diego", "Marta", "Elena", "Pablo", 
+    "Raúl", "Carmen", "Iván", "Lucía", "Tomás", "Santiago"
+]
+print("Los últimos 10 aprendices son:")
+for i in range(len(aprendices) - 10, len(aprendices)):
+    print(f"{i+1}. {aprendices[i]}")
+# los 10 al 20 
+
+aprendices = [
+    "Ana", "Luis", "María", "Carlos", "Pedro", "Luisa", "Jorge", "Sofía",
+    "Miguel", "Laura", "Andrés", "Clara", "Diego", "Marta", "Elena", "Pablo",
+    "Raúl", "Carmen", "Iván", "Lucía", "Tomás"
+]
+
+print("Aprendices del  10 al 20:")
+# Verificamos que no exceda el tamaño de la lista
+for i in range(10, min(20, len(aprendices))):
+    print(f"{i+1}. {aprendices[i]}")
+# aprendices con indice par
+
+aprendices = [
+    "Ana", "Luis", "María", "Carlos", "Pedro", "Luisa", "Jorge", "Sofía",
+    "Miguel", "Laura", "Andrés", "Clara", "Diego", "Marta", "Elena", "Pablo",
+    "Raúl", "Carmen", "Iván", "Lucía", "Tomás", "Santiago"
+]
+
+print("Aprendices con índice par:")
+for i in range(0, len(aprendices), 2):
+    print(f"Índice {i}: {aprendices[i]}")
